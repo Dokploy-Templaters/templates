@@ -1089,8 +1089,8 @@
     "tags": ["event"]
   },
   {
-    "id": "obsidian",
-    "name": "Obsidian",
+    "id": "livesync",
+    "name": "Obsidian-Livesync",
     "version": "latest",
     "description": "Self-hosted LiveSync is a community-developed synchronisation plug-in available on all Obsidian-compatible platforms. It leverages robust server solutions such as CouchDB or object storage systems (e.g., MinIO, S3, R2, etc.) to ensure reliable data synchronisation.",
     "logo": "obsidian.png",
