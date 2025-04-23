@@ -8,7 +8,13 @@ env = [
 "COUCHDB_USER=${username}",
 "COUCHDB_PASSWORD=${password}"
 ]
-mounts = []
+
+[[config.mounts]]
+filePath = "/volumes/config/local.ini"
+content = """
+
+"""
+
 
 [[config.domains]]
 serviceName = "couchdb"

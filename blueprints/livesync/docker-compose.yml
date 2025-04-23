@@ -10,7 +10,7 @@ services:
       - COUCHDB_PASSWORD=testitest
     volumes:
       - couchdb_data:/opt/couchdb/data
-      - ./config/local.ini:/opt/couchdb/etc/local.ini
+      - ../files/volumes/config/local.ini:/opt/couchdb/etc/local.ini
 
 volumes:
   couchdb_data:
