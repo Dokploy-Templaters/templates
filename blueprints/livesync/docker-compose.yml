@@ -3,14 +3,30 @@ version: '3.8'
 services:
   couchdb:
     image: couchdb:latest
-    container_name: obsidian-livesync
     user: 0:0
     environment:
-      - COUCHDB_USER=user
-      - COUCHDB_PASSWORD=testitest
+      COUCHDB_USER= ${username}
+      COUCHDB_PASSWORD= %{password}
     volumes:
       - couchdb_data:/opt/couchdb/data
       - ../files/volumes/config/local.ini:/opt/couchdb/etc/local.ini
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5984/_up"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  initdb:
+    image: alpine:latest
+    entrypoint: ../files/volumes/entrypoint.sh
+    environment:
+      - username=${username}
+      - password=${password}
+    depends_on:
+      couchdb:
+        condition: service_healthy
+
 
 volumes:
   couchdb_data:
