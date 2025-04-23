@@ -1089,6 +1089,19 @@
     "tags": ["event"]
   },
   {
+    "id": "obsidian",
+    "name": "Obsidian",
+    "version": "latest",
+    "description": "Self-hosted LiveSync is a community-developed synchronisation plug-in available on all Obsidian-compatible platforms. It leverages robust server solutions such as CouchDB or object storage systems (e.g., MinIO, S3, R2, etc.) to ensure reliable data synchronisation.",
+    "logo": "obsidian.png",
+    "links": {
+      "github": "https://github.com/vrtmrz/obsidian-livesync",
+      "website": "https://github.com/vrtmrz/obsidian-livesync",
+      "docs": "https://github.com/vrtmrz/obsidian-livesync"
+    },
+    "tags": ["self-hosted", "knowledge-management", "obsidian-plugin"]
+  },
+  {
     "id": "triggerdotdev",
     "name": "Trigger.dev",
     "version": "v3",

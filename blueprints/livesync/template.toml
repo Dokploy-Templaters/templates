@@ -1,0 +1,16 @@
+[variables]
+main_domain = "${domain}"
+username = "${username}"
+password = "${password}"
+
+[config]
+env = [
+"COUCHDB_USER=${username}",
+"COUCHDB_PASSWORD=${password}"
+]
+mounts = []
+
+[[config.domains]]
+serviceName = "couchdb"
+port = 5984
+host = "${main_domain}"
