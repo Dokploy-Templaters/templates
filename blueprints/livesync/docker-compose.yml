@@ -5,8 +5,8 @@ services:
     image: couchdb:latest
     user: 0:0
     environment:
-      COUCHDB_USER= ${username}
-      COUCHDB_PASSWORD= %{password}
+      - COUCHDB_USER=${username}
+      - COUCHDB_PASSWORD=%{password}
     volumes:
       - couchdb_data:/opt/couchdb/data
       - ../files/volumes/config/local.ini:/opt/couchdb/etc/local.ini
